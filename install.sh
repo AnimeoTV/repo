@@ -289,12 +289,12 @@ L'installateur a besoin d'exécuter des commandes ${bold}en tant que root${norma
 			repo_file_url="https://raw.githubusercontent.com/AnimeoTV/repo/master/animeo.repo"
 			(
 				print_status "Installation des pré-requis..."
-				$sh_c "$pkg_manager install -y -q $pre_reqs"
+				$sh_c "$pkg_manager install -y $pre_reqs"
 				print_status "Ajout du repo Animeo TV..."
 				$sh_c "$config_manager --add-repo $repo_file_url"
 				$sh_c "$pkg_manager makecache"
 				print_status "Installation d'Animeo TV..."
-				$sh_c "$pkg_manager install -y -q animeo-tv-desktop"
+				$sh_c "$pkg_manager install -y animeo-tv-desktop"
 			)
 			print_status "Animeo TV est désormais installé !"
 			exit 0
