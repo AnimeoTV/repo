@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-# Script d'installation d'Animeo TV
+# Script d'installation d'Animeo TV, créé à partir des scripts d'installation de Docker (https://get.docker.com) et du repo NodeSource (https://deb.nodesource.com/setup_18.x)
 
 print_status() {
     echo
