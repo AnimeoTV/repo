@@ -253,9 +253,9 @@ L'installateur a besoin d'exécuter des commandes ${bold}en tant que root${norma
 			apt_repo="deb [arch=amd64 signed-by=/etc/apt/keyrings/animeo.gpg] https://repo.animeovf.fr/repository/apt jammy main"
 			(
 				print_status "Actualisation des paquets..."
-				$sh_c 'apt-get update -qq >/dev/null'
+				$sh_c 'apt-get update'
 				print_status "Installation des pré-requis..."
-				$sh_c "DEBIAN_FRONTEND=noninteractive apt-get install -y -qq $pre_reqs >/dev/null"
+				$sh_c "DEBIAN_FRONTEND=noninteractive apt-get install -y $pre_reqs"
 				print_status "Ajout de la clé GPG du repo Animeo TV..."
 				$sh_c 'install -m 0755 -d /etc/apt/keyrings'
 				$sh_c "curl -fsSL \"https://raw.githubusercontent.com/AnimeoTV/repo/master/repo_public.pgp\" | gpg --dearmor --yes -o /etc/apt/keyrings/animeo.gpg"
@@ -263,9 +263,9 @@ L'installateur a besoin d'exécuter des commandes ${bold}en tant que root${norma
 				print_status "Ajout du repo Animeo TV..."
 				$sh_c "echo \"$apt_repo\" > /etc/apt/sources.list.d/animeo.list"
 				print_status "Actualisation des paquets..."
-				$sh_c 'apt-get update -qq >/dev/null'
+				$sh_c 'apt-get update'
 				print_status "Installation d'Animeo TV..."
-				$sh_c "DEBIAN_FRONTEND=noninteractive apt-get install -y -qq animeo-tv-desktop >/dev/null"
+				$sh_c "DEBIAN_FRONTEND=noninteractive apt-get install -y animeo-tv-desktop"
 			)
 			print_status "Animeo TV est désormais installé !"
 			exit 0
