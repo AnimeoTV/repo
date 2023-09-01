@@ -136,9 +136,11 @@ do_install() {
 "                                 AVERTISSEMENT                                  " "\
 L'application Animeo TV à l'air d'être ${bold}déjà installée${normal} sur votre système.
   Si vous voulez la désinstaller, la commande 
-  ${bold}\"sudo apt uninstall animeo-tv-desktop${normal}\" est probablement celle que vous cherchez.
+  ${bold}\"sudo apt uninstall animeo-tv-desktop${normal}\" est probablement 
+  celle que vous cherchez.
 
-  Vous pouvez appuyer sur CTRL+C pour arrêter le script, ou attendre 20 secondes pour que l'installation continue.
+  Vous pouvez appuyer sur CTRL+C pour arrêter le script, 
+  ou attendre 20 secondes pour que l'installation continue.
 "
 		sleep 20
 	fi
