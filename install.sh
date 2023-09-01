@@ -60,8 +60,9 @@ deprecation_notice() {
 	distro_version=$2
 
 	print_bold \
-"                                   ERREUR                                   " "\
-Cette distribution Linux ($distro $distro_version) a atteint la ${bold}fin de vie ${normal}et n'est plus supportée par ce script.
+"                                     ERREUR                                     " "\
+Cette distribution Linux ($distro $distro_version) 
+a atteint la ${bold}fin de vie ${normal}et n'est plus supportée par ce script.
 Veuillez utiliser une ${bold}version actuellement maintenue${normal} de $distro
 ou installer l'application manuellement.
 "
@@ -132,10 +133,10 @@ do_install() {
 
 	if command_exists animeo-tv-desktop; then
 	    print_bold \
-"                               AVERTISSEMENT                                " "\
-L'application Animeo TV à l'air d'être déjà installé sur votre système.
-  Si vous voulez la désinstaller, la commande ${bold}\"sudo apt uninstall animeo-tv-desktop${normal}\"
-  est probablement celle que vous cherchez.
+"                                 AVERTISSEMENT                                  " "\
+L'application Animeo TV à l'air d'être ${bold}déjà installée${normal} sur votre système.
+  Si vous voulez la désinstaller, la commande 
+  ${bold}\"sudo apt uninstall animeo-tv-desktop${normal}\" est probablement celle que vous cherchez.
 
   Vous pouvez appuyer sur CTRL+C pour arrêter le script, ou attendre 20 secondes pour que l'installation continue.
 "
@@ -157,7 +158,7 @@ L'application Animeo TV à l'air d'être déjà installé sur votre système.
 			sh_c='su -c'
 		else
 		    print_bold \
-"                                   ERREUR                                   " "\
+"                                     ERREUR                                     " "\
 L'installateur a besoin d'exécuter des commandes ${bold}en tant que root${normal}.
   Nous n'avons réussi à trouver ${bold}ni \"sudo\" ni \"su\"${normal} pour que cela ce produise.
 "
