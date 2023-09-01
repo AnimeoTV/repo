@@ -131,7 +131,7 @@ do_install() {
 	print_status "Script d'installation d'Animeo TV"
 
 	if command_exists animeo-tv-desktop; then
-	    print_status \
+	    print_bold \
 "                               AVERTISSEMENT                                " "\
 L'application Animeo TV à l'air d'être déjà installé sur votre système.
   Si vous voulez la désinstaller, la commande ${bold}\"sudo apt uninstall animeo-tv-desktop${normal}\"
@@ -156,7 +156,7 @@ L'application Animeo TV à l'air d'être déjà installé sur votre système.
 		elif command_exists su; then
 			sh_c='su -c'
 		else
-		    print_status \
+		    print_bold \
 "                                   ERREUR                                   " "\
 L'installateur a besoin d'exécuter des commandes ${bold}en tant que root${normal}.
   Nous n'avons réussi à trouver ${bold}ni \"sudo\" ni \"su\"${normal} pour que cela ce produise.
