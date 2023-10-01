@@ -3,4 +3,4 @@ name=Animeo TV
 baseurl=https://repo.animeovf.fr/repository/yum
 enabled=1
 gpgcheck=1
-gpgkey=https://github.com/AnimeoTV/repo/raw/master/repo_public.pgp
+gpgkey=https://github.com/AnimeoTV/repo/raw/master/repo_public.gpg
